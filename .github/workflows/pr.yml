@@ -34,7 +34,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Build Android example with new arch
+            - name: Build Android example app with new arch
               uses: ./.github/actions/build-android
               with:
                   build-4-new-arch: true
@@ -46,7 +46,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Build iOS example with new arch
+            - name: Build iOS example app with new arch
               uses: ./.github/actions/build-ios
               with:
                   build-4-new-arch: true

@@ -13,12 +13,22 @@ runs:
           uses: actions/github-script@v6
           env:
               TAG_NAME: release/${{ env.VERSION_NUMBER }}/${{ env.BUILD_NUMBER }}
+              TAG_MESSAGE: "Release NMA SDK Example App React ${{ env.VERSION_NUMBER }}/${{ env.BUILD_NUMBER }}"
           with:
               github-token: ${{ env.GITHUB_TOKEN }}
               script: |
+                  const createdTag = await github.rest.git.createTag({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    tag: process.env.TAG_NAME,
+                    message: process.env.TAG_NAME,
+                    object: context.sha,
+                    type: "commit"
+                  })
+
                   await github.rest.git.createRef({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     ref: "refs/tags/" + process.env.TAG_NAME,
-                    sha: context.sha
+                    sha: createdTag.data.sha
                   })

@@ -42,13 +42,6 @@ runs:
           if: steps.cocoapods-cache.outputs.cache-hit != 'true' && inputs.build-4-new-arch == 'false'
           run: yarn pods:old
 
-        - name: Build example for iOS
+        - name: Build example app for iOS
           shell: bash
           run: yarn ios:build
-
-        - name: Slack report
-          if: ${{ github.ref == 'refs/heads/main' }}
-          uses: ./.github/actions/slack-report
-          with:
-              platform: 'iOS'
-              is-workflow-state-success: success()

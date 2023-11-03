@@ -16,4 +16,4 @@ runs:
           id: build_number
           uses: onyxmueller/build-tag-number@v1
           with:
-              token: ${{env.GITHUB_TOKEN}}
+              token: ${{ env.GITHUB_TOKEN }}

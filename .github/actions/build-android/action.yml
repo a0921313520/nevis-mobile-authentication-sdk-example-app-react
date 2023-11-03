@@ -38,13 +38,6 @@ runs:
                   ~/.gradle/caches
               key: ${{ runner.os }}-gradle-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}-${{ inputs.build-4-new-arch == 'true' && 'new-arch' || 'old-arch' }}-${{ env.BUILD_TYPE }}
 
-        - name: Build example for Android
+        - name: Build example app for Android
           shell: bash
           run: yarn android:build
-
-        - name: Slack report
-          if: ${{ github.ref == 'refs/heads/main' }}
-          uses: ./.github/actions/slack-report
-          with:
-              platform: 'iOS'
-              is-workflow-state-success: success()
