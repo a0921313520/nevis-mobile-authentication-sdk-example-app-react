@@ -1,4 +1,4 @@
-package ch.nevis.mobile.authentication.sdk.react.example;
+package ch.nevis2.mobile2.authentication.sdk.react.example;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

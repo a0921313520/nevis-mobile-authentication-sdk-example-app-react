@@ -68,9 +68,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "ch.nevis.mobile.authentication.sdk.react.example"
+    namespace "ch.nevis2.mobile2.authentication.sdk.react.example"
     defaultConfig {
-        applicationId "ch.nevis.mobile.authentication.sdk.react.example"
+        applicationId "ch.nevis2.mobile2.authentication.sdk.react.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
