@@ -21,7 +21,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@nevis-security/nevis-mobile-authentication-sdk-react": "3.5.1",
+		"@nevis-security/nevis-mobile-authentication-sdk-react": "^3.5.1",
 		"@react-navigation/native": "^6.1.9",
 		"@react-navigation/native-stack": "^6.9.16",
 		"i18next": "^23.6.0",
