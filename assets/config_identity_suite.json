@@ -2,7 +2,7 @@
 	"loginRequestURL": "https://mycompany.com/auth/pwd",
 	"sdk": {
 		"baseUrl": "https://mycompany.com",
-		"facetId": "android:apk-key-hash:ch.nevis.mobile.authentication.sdk.react.example",
+		"facetId": "android:apk-key-hash:8GcYqq9Oxmrx46dciU4iimoCRzhd9HXfu8AK3+ZVX9k",
 		"registrationRequestPath": "/nevisfido/uaf/1.1/request/registration/",
 		"registrationResponsePath": "/nevisfido/uaf/1.1/registration/",
 		"authenticationRequestPath": "/auth/fidouaf",
