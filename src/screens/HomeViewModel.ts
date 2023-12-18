@@ -139,6 +139,10 @@ const useHomeViewModel = () => {
 		navigation.navigate('UsernamePasswordLogin');
 	}
 
+	function inBandRegister1() {
+		navigation.navigate('UsernamePasswordLogin1');
+	}
+
 	function selectAccount(operation: OperationType) {
 		navigation.navigate('SelectAccount', {
 			items: localAccounts.map((account) => new AccountItem(account.username)),
@@ -315,6 +319,7 @@ const useHomeViewModel = () => {
 		readQrCode,
 		authCloudApiRegister,
 		inBandRegister,
+		inBandRegister1,
 		inBandAuthenticate,
 		deregister,
 		changeDeviceInformation,

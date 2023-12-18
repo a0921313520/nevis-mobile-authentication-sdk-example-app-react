@@ -2,7 +2,7 @@
  * Copyright © 2023 Nevis Security AG. All rights reserved.
  */
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FlatList, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -12,6 +12,8 @@ import { useDynamicValue } from 'react-native-dynamic';
 import { type RootStackParamList } from './RootStackParamList';
 import useSelectAccountViewModel from './SelectAccountViewModel';
 import { dynamicStyles } from '../Styles';
+
+import OutlinedButton from '../components/OutlinedButton';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SelectAccount'>;
 
@@ -68,6 +70,11 @@ const SelectAccountScreen = ({ route }: Props) => {
 			/>
 		);
 	};
+	const { cancel } = useSelectAccountViewModel();
+
+	const onCancel = useCallback(async () => {
+        cancel();
+    }, []);
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -79,6 +86,7 @@ const SelectAccountScreen = ({ route }: Props) => {
 					renderItem={renderItem}
 					keyExtractor={(item) => item.username}
 				/>
+				<OutlinedButton text={t('cancelButtonTitle')} onPress={onCancel} />
 			</View>
 		</SafeAreaView>
 	);

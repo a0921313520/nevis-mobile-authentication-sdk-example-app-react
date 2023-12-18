@@ -141,7 +141,12 @@ const useSelectAccountViewModel = () => {
 			.catch(ErrorHandler.handle.bind(null, operation));
 	}
 
+	function cancel() {
+		navigation.goBack();
+	}
+
 	return {
+		cancel,
 		select,
 	};
 };

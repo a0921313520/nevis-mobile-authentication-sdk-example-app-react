@@ -24,6 +24,7 @@ const HomeScreen = () => {
 		readQrCode,
 		authCloudApiRegister,
 		inBandRegister,
+		inBandRegister1,
 		inBandAuthenticate,
 		deregister,
 		changeDeviceInformation,
@@ -76,6 +77,7 @@ const HomeScreen = () => {
 				</View>
 				<View style={styles.middleContainer} />
 				<View style={styles.bottomContainer}>
+					<OutlinedButton text={t('home.inBandRegister')} onPress={inBandRegister1} />
 					<OutlinedButton text={t('home.readQrCode')} onPress={readQrCode} />
 					<OutlinedButton
 						text={t('home.inBandAuthenticate')}

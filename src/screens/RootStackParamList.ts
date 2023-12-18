@@ -46,6 +46,7 @@ export type RootStackParamList = {
 		accountSelectionHandler?: AccountSelectionHandler;
 	};
 	UsernamePasswordLogin: undefined;
+	UsernamePasswordLogin1: undefined;
 	Result: {
 		operation: OperationType;
 		errorDescription?: string;

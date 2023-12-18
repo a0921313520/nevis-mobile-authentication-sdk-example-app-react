@@ -18,6 +18,8 @@ import { RegistrationAuthenticatorSelectorImpl } from '../userInteraction/Regist
 import { ClientProvider } from '../utility/ClientProvider';
 import { DeviceInformationUtils } from '../utility/DeviceInformationUtils';
 
+import { CallApi } from './UsernamePasswordLoginScreen1'
+
 const useAuthCloudApiRegistrationViewModel = () => {
 	const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
@@ -34,6 +36,7 @@ const useAuthCloudApiRegistrationViewModel = () => {
 			.devicePasscodeUserVerifier(new DevicePasscodeUserVerifierImpl())
 			.fingerprintUserVerifier(new FingerprintUserVerifierImpl())
 			.onSuccess(() => {
+				CallApi()
 				console.log('Auth Cloud API registration succeeded.');
 				navigation.navigate('Result', {
 					operation: OperationType.authCloudApiRegistration,

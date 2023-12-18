@@ -18,12 +18,14 @@ import SelectAccountScreen from './screens/SelectAccountScreen';
 import SelectAuthenticatorScreen from './screens/SelectAuthenticatorScreen';
 import TransactionConfirmationScreen from './screens/TransactionConfirmationScreen';
 import UsernamePasswordLoginScreen from './screens/UsernamePasswordLoginScreen';
+import UsernamePasswordLoginScreen1 from './screens/UsernamePasswordLoginScreen1';
 import { navigationRef } from './utility/RootNavigation';
 import './i18n/I18n';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+	window.statusToken = 'aaa'
 	return (
 		<NavigationContainer ref={navigationRef}>
 			<RootStack.Navigator screenOptions={{ headerShown: false }}>
@@ -46,6 +48,10 @@ export default function App() {
 				<RootStack.Screen
 					name="UsernamePasswordLogin"
 					component={UsernamePasswordLoginScreen}
+				/>
+				<RootStack.Screen
+					name="UsernamePasswordLogin1"
+					component={UsernamePasswordLoginScreen1}
 				/>
 				<RootStack.Screen
 					name="TransactionConfirmation"

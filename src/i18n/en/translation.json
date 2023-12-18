@@ -61,6 +61,11 @@
 		"username": "Enter username",
 		"password": "Enter password"
 	},
+	"usernamePasswordLogin1": {
+		"title": "In-Band Registration",
+		"username": "Enter username",
+		"password": "Enter password"
+	},
 	"cancelButtonTitle": "Cancel",
 	"confirmButtonTitle": "Ok",
 	"biometric": {
